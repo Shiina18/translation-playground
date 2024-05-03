@@ -1,0 +1,31 @@
+/* 隐藏并初始化图片预览容器样式 */
+.image-preview {
+  display: none;                  /* 初始状态下隐藏图片预览区域 */
+  position: absolute;             /* 使用绝对定位，依据最近的定位父元素进行布局 */
+  z-index: 1000;                  /* 设置较高的堆叠层级，确保预览窗口位于顶层 */
+  
+  /* 边框和背景样式 */
+  border: 1px solid #ddd;         /* 添加灰色细边框 */
+  border-radius: 12px;             /* 边框圆角处理，增加视觉友好度 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 添加微妙阴影效果以提升层次感 */
+  
+  background-color: #fff;         /* 设置背景为白色 */
+  
+  /* 内部填充样式 */
+  padding: 10px;                  /* 在内容周围添加内边距，提供舒适的预览空间 */
+  
+  max-width: 350px;
+  
+  /* 移动到文字下方 */
+  transform: translate(-30px, 20px);
+}
+
+/* 鼠标悬停时显示图片预览 */
+a.image-link:hover + .image-preview,
+a.image-link:focus + .image-preview {
+  display: inline-block; /* 当鼠标悬停或焦点在链接上时显示图片预览 */
+}
+
+img.bg-transparent {
+  margin-bottom: 1.4rem;
+}
